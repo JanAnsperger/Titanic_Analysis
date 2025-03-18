@@ -16,13 +16,13 @@ def bereinige_daten(df):
     df_bereinigt = df.copy()
     
     # Entferne nicht relevante oder redundante Spalten
-    drop_columns = ["embark_town", "alive", "deck", "class", "sex", "adult_male", "alone"]
+    drop_columns = ["embarked", "alive", "deck", "class", "sex", "adult_male", "alone"]
     df_bereinigt = df_bereinigt.drop(columns=drop_columns, errors="ignore")
     
     # Fehlende Werte ersetzen (ohne inplace=True)
     df_bereinigt["age"] = df_bereinigt["age"].fillna(df_bereinigt["age"].median())
     df_bereinigt["fare"] = df_bereinigt["fare"].fillna(df_bereinigt["fare"].median())
-    df_bereinigt["embarked"] = df_bereinigt["embarked"].fillna(df_bereinigt["embarked"].mode()[0])
+    df_bereinigt["embark_town"] = df_bereinigt["embark_town"].fillna(df_bereinigt["embark_town"].mode()[0])
     
     return df_bereinigt
 
