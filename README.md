@@ -15,54 +15,50 @@ Unsere Schwerpunkte sind:
 
 ```
 Titanic_Analysis/
-├── README.md                               # Projektbeschreibung mit einer Übersicht über das Projekt
+├── README.md                                               # Projektbeschreibung mit einer Übersicht über das Projekt
 │
-├── main.ipynb                              # Main-Ausgabe der bereinigten Daten
+├── main.ipynb                                              # Haupt-Notebook mit der finalen Analyse und Ergebnissen  
 │                                 
-├── data/                                   # Enthält alle Daten für die Analyse  
-│    ├── processed/                         # Vorverarbeitete Daten nach Bereinigung und Transformation  
-│        ├──  
-│    ├── titanic_kaggle
-│         ├── gender_submission.csv
-│         ├── test.csv
-│         ├── train.csv
+├── data/                                                   # Enthält alle Roh- und verarbeiteten Daten  
+│    ├── processed/                                         # Bereinigte & transformierte Daten  
+│    ├── titanic_kaggle/                                    # Original-Kaggle-Datensätze  
+│         ├── gender_submission.csv                         # Beispiel-Submission für Kaggle-Wettbewerb  
+│         ├── test.csv                                      # Test-Daten ohne Überlebenslabel  
+│         ├── train.csv                                     # Trainingsdaten mit Überlebenslabel  
 │
-├── notebooks/                              # Jupyter Notebooks oder Python-Skripte für Analysen und Exploration  
-│    ├── titanic_analysis.ipnyb             # Hauptskript für die Datenanalyse  
-│    ├── ticket.ipynb
-│    ├── korrelation_datenpunkte.ipynb
+├── notebooks/                                              # Explorative Datenanalysen & Experimente  
+│    ├── korrelation_datenpunkte.ipynb                      # Untersuchung der Korrelationen zwischen Features  
+│    ├── ticket.ipynb                                       # Analyse von Ticket-Daten  
+│    ├── titanic_analysis.ipynb                             # Hauptskript für die gesamte Datenanalyse  
 │
-├── results/                                # Ergebnisse der Analysen, z. B. Diagramme und Berichte  
-│    ├── age_pclass.png
-│    ├── correlation_heatmap.png
-│    ├── family_alone.png
-│    ├── family_sibsp.png
-│    ├── survival_by_embark_town.png
-│    ├── survival_by_embarked_age_group.png
-│    ├── survival_passenger_with_family.png
-│    ├── survival_rate_by_age.png
-│    ├── survival_rate_by_class.png
-│    ├── survival_rate_by_gender.png
-│    ├── Ueberlebende_nach_Passagierklassen_1_Anzahl.png
-│    ├── Ueberlebende_nach_Passagierklassen_2-Anteil.png
-│    ├── ticket_summary_filtered.csv
-│    ├── ticket_summary.csv
+├── results/                                                # Visualisierungen und Analyseergebnisse  
+│    ├── age_pclass.png                                     # Altersverteilung pro Passagierklasse  
+│    ├── confusion_matrix_ml.png                            # ML-Modell: Konfusionsmatrix  
+│    ├── correlation_heatmap.png                            # Heatmap der Merkmalskorrelationen  
+│    ├── family_alone.png                                   # Überlebensraten von Alleinreisenden  
+│    ├── family_sibsp.png                                   # Überlebensraten nach Anzahl der Geschwister/Ehepartner  
+│    ├── survival_by_embark_town.png                        # Überlebensrate nach Einschiffungshafen  
+│    ├── survival_by_embarked_age_group.png                 # Überlebensrate nach Alter und Einschiffungshafen  
+│    ├── survival_passenger_with_family.png                 # Überlebensrate von Passagieren mit Familie  
+│    ├── survival_rate_by_age.png                           # Überlebensrate nach Altersgruppen  
+│    ├── survival_rate_by_class.png                         # Überlebensrate pro Ticketklasse  
+│    ├── survival_rate_by_gender.png                        # Überlebensrate nach Geschlecht  
+│    ├── ticket_summary_filtered.csv                        # Gefilterte Ticketanalyse  
+│    ├── ticket_summary.csv                                 # Gesamt-Ticketanalyse  
+│    ├── Ueberlebende_nach_Passagierklassen_1_Anzahl.png    # Überlebende pro Klasse (absolute Zahlen)  
+│    ├── Ueberlebende_nach_Passagierklassen_2-Anteil.png    # Überlebende pro Klasse (prozentual)  
 │
-├── src/                                    # Enthält den eigentlichen Code des Projekts, z. B. Funktionen und Modelle  
-│   ├── __pycache__
-│         ├── datenvorbereitung.cpython-313.pyc
-│         ├── utils.cpython-313.pyc
-│         ├── visualisierungen.cpython-313.pyc
+├── src/                                                    # Quellcode für Datenverarbeitung & Modellierung  
+│   ├── __pycache__/                                        # Zwischengespeicherte kompilierte Python-Dateien  
+│   ├── datenvorbereitung.py                                # Vorverarbeitung: Laden & Bereinigen der Daten  
+│   ├── visualisierungen.py                                 # Funktionen zur Generierung von Diagrammen  
+│   ├── utils.py                                            # Hilfsfunktionen für das Projekt  
 │
-│   ├── datenvorbereitung.py                # Laden & Bereinigen der Hauptdaten von Seaborn Datensatz ("titanic")
-│   ├── visualisierungen.py                 # Plots & Analysen
-│   ├── utils.py                            # Hilfsfunktionen
+├── tests/                                                  # Test-Skripte zur Validierung der Analysen  
+│    ├── machine_learning_fully_commented.ipynb             # Dokumentierte ML-Analyse  
+│    ├── konfusionsmatrix_auswertung.txt                    # Bewertung der Konfusionsmatrix  
 │
-├── tests/                                  # Tests für den Code, um sicherzustellen, dass alles korrekt funktioniert  
-│    ├── maschine_learning_fully_commented.ipynb
-│    ├── konfusionsmatrix_auswertung.txt
-│
-└── requirements.txt                        # Liste der benötigten Python-Bibliotheken für das Projekt 
+└── requirements.txt                                        # Liste aller benötigten Python-Bibliotheken  
 ```
 
 ### Hinweise für Nutzer
